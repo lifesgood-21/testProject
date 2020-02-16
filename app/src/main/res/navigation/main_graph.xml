@@ -1,0 +1,30 @@
+<navigation android:id="@+id/man_graph"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	app:startDestination="@id/mainFragment">
+
+	<fragment android:id="@+id/mainFragment"
+		android:name="ru.lifesgood.testapp.ui.main.MainFragment"
+		android:label="@string/low_coast_ticket_search"
+		tools:layout="@layout/fragment_main">
+
+		<action android:id="@+id/action_mainFragment_to_searchFragment"
+			app:destination="@id/searchFragment" />
+
+		<action android:id="@+id/action_mainFragment_to_inputAirportActivity"
+			app:destination="@id/inputAirportActivity" />
+
+	</fragment>
+
+	<fragment android:id="@+id/searchFragment"
+		android:name="ru.lifesgood.testapp.ui.search.view.SearchFragment"
+		android:label="@string/let_search_friend"
+		tools:layout="@layout/fragment_search" />
+
+	<activity android:id="@+id/inputAirportActivity"
+		android:name="ru.lifesgood.testapp.ui.inputAirports.view.InputAirportActivity"
+		android:label="activity_input_airport"
+		tools:layout="@layout/activity_input_airport" />
+
+</navigation>
