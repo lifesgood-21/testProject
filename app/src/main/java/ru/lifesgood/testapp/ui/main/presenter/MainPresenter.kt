@@ -53,8 +53,9 @@ class MainPresenter(
                 val text = applicationContext.getString(R.string.departure_must_be_different)
                 val throwable = Throwable(text)
                 view?.displayError(throwable)
+            } else {
+                view?.startSearch(departure!!, arrival!!)
             }
-            view?.startSearch(departure!!, arrival!!)
         }else{
             val throwable = Throwable(applicationContext.getString(R.string.arrival_departure_error))
             view?.displayError(throwable)
