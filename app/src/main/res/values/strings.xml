@@ -11,4 +11,5 @@
 	<string name="let_search_friend">Давай поищем, дружок</string>
 	<string name="airporn_not_find">Аэропорт не найден</string>
 	<string name="enter_airport_name">Введите название аэропорта</string>
+	<string name="departure_must_be_different">Пункт отправления должен отличаться от пункта назначения</string>
 </resources>

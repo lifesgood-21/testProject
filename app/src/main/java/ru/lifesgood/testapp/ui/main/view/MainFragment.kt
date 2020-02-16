@@ -1,4 +1,4 @@
-package ru.lifesgood.testapp.ui.main
+package ru.lifesgood.testapp.ui.main.view
 
 import android.content.Context
 import android.content.Intent
@@ -17,13 +17,19 @@ import ru.lifesgood.testapp.core.PresentersProvider
 import ru.lifesgood.testapp.core.network.NetworkRequestManager
 import ru.lifesgood.testapp.core.network.data.City
 import ru.lifesgood.testapp.ui.inputAirports.view.InputAirportActivity
+import ru.lifesgood.testapp.ui.main.presenter.MainPresenter
+import ru.lifesgood.testapp.ui.main.repository.MainRemoteRepositoryImpl
 import ru.lifesgood.testapp.ui.search.view.SearchFragment.Companion.ARRIVAL_KEY
 import ru.lifesgood.testapp.ui.search.view.SearchFragment.Companion.DEPARTURE_KEY
 
-class MainFragment : Fragment(R.layout.fragment_main), MainView {
+class MainFragment : Fragment(R.layout.fragment_main),
+    MainView {
 
     private lateinit var presenter: MainPresenter
-    private val repository = MainRemoteRepositoryImpl(NetworkRequestManager.api)
+    private val repository =
+        MainRemoteRepositoryImpl(
+            NetworkRequestManager.api
+        )
     private lateinit var navController: NavController
 
     override fun onAttach(context: Context) {

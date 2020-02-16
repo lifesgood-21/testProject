@@ -1,4 +1,4 @@
-package ru.lifesgood.testapp.ui.main
+package ru.lifesgood.testapp.ui.main.view
 
 import android.os.Bundle
 import android.os.PersistableBundle

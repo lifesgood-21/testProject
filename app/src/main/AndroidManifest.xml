@@ -13,7 +13,7 @@
 
 		<activity android:name=".ui.inputAirports.view.InputAirportActivity" />
 
-		<activity android:name=".ui.main.MainActivity">
+		<activity android:name=".ui.main.view.MainActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<action android:name="android.intent.action.VIEW"/>

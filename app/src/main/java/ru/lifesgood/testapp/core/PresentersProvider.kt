@@ -4,9 +4,9 @@ import android.content.Context
 import ru.lifesgood.testapp.ui.inputAirports.presenter.InputAirportPresenter
 import ru.lifesgood.testapp.ui.inputAirports.repository.InputAirportRepository
 import ru.lifesgood.testapp.ui.inputAirports.view.InputAirportView
-import ru.lifesgood.testapp.ui.main.MainPresenter
-import ru.lifesgood.testapp.ui.main.MainRemoteRepository
-import ru.lifesgood.testapp.ui.main.MainView
+import ru.lifesgood.testapp.ui.main.presenter.MainPresenter
+import ru.lifesgood.testapp.ui.main.repository.MainRemoteRepository
+import ru.lifesgood.testapp.ui.main.view.MainView
 import ru.lifesgood.testapp.ui.search.presenter.SearchPresenter
 import ru.lifesgood.testapp.ui.search.view.SearchView
 
@@ -28,7 +28,11 @@ object PresentersProvider{
         repository: MainRemoteRepository,
         applicationContext: Context
     ) {
-        mainPresenter = MainPresenter(view, repository, applicationContext)
+        mainPresenter = MainPresenter(
+            view,
+            repository,
+            applicationContext
+        )
     }
 
     fun killMainPresenter(){
